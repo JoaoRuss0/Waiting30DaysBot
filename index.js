@@ -6,12 +6,15 @@ const token = process.env.TOKEN
 
 const startingDate = new Date(2021,11, 6, 17, 0, 0, 0)
 const sixHoursInMilliseconds = 6*60*60*1000;
-var channel = null;
+var channels = [];
 
 bot.on('ready', ()=>{
     console.log("Bot is online!")
     bot.user.setActivity('the waiting game ...')
-    channel = bot.channels.cache.get('817386112044630061')
+
+    channels.push(bot.channels.cache.get('917526064065024052'))
+    channels.push(bot.channels.cache.get('430697034358456321'))
+    channels.push(bot.channels.cache.get('837488769266745344'))
 
     printConnectedServers()
     dailyUpdates()
@@ -41,7 +44,7 @@ function printElapsedTime() {
         .setTimestamp()
         .setFooter('By JoaoRuss0#4113');
 
-    channel.send(message);
+    channels.forEach(channel => channel.send(message));
 }
 
 function dailyUpdates() {
