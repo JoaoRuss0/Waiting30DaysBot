@@ -1,4 +1,4 @@
-# Waiting30DaysBot
+# WaitingBot
 
 ## Description
 
@@ -13,3 +13,7 @@ $ npm install
 # run
 $ node index.js
 ```
+
+## Conclusion
+
+Bot ran for 9 days, got an email stating the monitor was ready to be picked up, picked it up, 4 hours in and it looks as good as new :)
